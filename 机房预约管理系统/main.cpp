@@ -33,6 +33,9 @@ int main() {
 		case 3: // 管理员接口
 			break;
 		case 0: // 退出
+			cout << "欢迎下一次使用" << endl;
+			system("pause");
+			return 0;
 			break;
 		default:
 			cout << "输入有误请重新输入" << endl;
