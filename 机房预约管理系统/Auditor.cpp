@@ -8,4 +8,4 @@ void Auditor::Menu(){}//菜单
 
 void Auditor::showAllOrder(){}//查看所有预约
 
-void Auditor::validOrder(){}//审核预约
+void Auditor::validOrder(){}//审核的预约
