@@ -1,5 +1,8 @@
 #pragma once
 
+//后续可能会改成mysql，或者sqline
+
+
 //管理员文件
 #define ADMIN_FILE "admin.txt"
 

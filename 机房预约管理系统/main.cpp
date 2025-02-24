@@ -3,7 +3,7 @@
 #include "globalFile.h"
 #include "Identity.h"
 #include <string>
-
+#include "Teacher.h"
 using namespace std;
 
 void LoginIn(string fileName, int type);
@@ -95,6 +95,21 @@ void LoginIn(string fileName, int type)
 	if (type == 1)
 	{
 		//老师登录验证
+		int fId;
+		string fName;
+		string fPwd;
+		while (ifs >> fId && ifs >> fName && ifs >> fPwd)
+		{
+			if (fId == id && fName == name && fPwd == pwd)
+			{
+				cout << "老师验证登录成功!" << endl;
+				system("pause");
+				system("cls");
+				person = new Teacher(id, name, pwd);
+
+				return;//返回
+			}
+		}
 	}
 	else if (type == 2)
 	{
