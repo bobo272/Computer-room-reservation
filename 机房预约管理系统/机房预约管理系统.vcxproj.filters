@@ -48,5 +48,6 @@
   <ItemGroup>
     <Text Include="teacher.txt" />
     <Text Include="auditor.txt" />
+    <Text Include="admin.txt" />
   </ItemGroup>
 </Project>

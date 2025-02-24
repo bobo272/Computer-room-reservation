@@ -16,6 +16,7 @@ using namespace std;
 
 class Manager :public Identity
 {	
+public:
 	Manager();//默认构造
 	
 	Manager(string name, string pwd);//有参构造  管理员姓名，密码

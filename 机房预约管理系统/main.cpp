@@ -5,6 +5,7 @@
 #include "Identity.h"
 #include "Teacher.h"
 #include "Auditor.h"
+#include "Manager.h"
 using namespace std;
 
 void LoginIn(string fileName, int type);
@@ -134,6 +135,22 @@ void LoginIn(string fileName, int type)
 	else if (type == 3)
 	{
 		//管理员登录验证
+
+		//初始管理员为bobo，密码为123
+		string fName;
+		string fPwd;
+		while (ifs >> fName && ifs >> fPwd)
+		{
+			if (fName == name && fPwd == pwd)
+			{
+				cout << "管理员验证登录成功!" << endl;
+				system("pause");
+				system("cls");
+				person = new Manager(name, pwd);
+
+				return;//返回
+			}
+		}
 	}
 
 	cout << "验证登录失败!" << endl;
