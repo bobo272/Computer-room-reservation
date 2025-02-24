@@ -1,9 +1,10 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "globalFile.h"
 #include "Identity.h"
-#include <string>
 #include "Teacher.h"
+#include "Auditor.h"
 using namespace std;
 
 void LoginIn(string fileName, int type);
@@ -114,6 +115,21 @@ void LoginIn(string fileName, int type)
 	else if (type == 2)
 	{
 		//审核登录验证
+		int fId;
+		string fName;
+		string fPwd;
+		while (ifs >> fId && ifs >> fName && ifs >> fPwd)
+		{
+			if (fId == id && fName == name && fPwd == pwd)
+			{
+				cout << "审核员验证登录成功!" << endl;
+				system("pause");
+				system("cls");
+				person = new Auditor(id, name, pwd);
+
+				return;//返回
+			}
+		}
 	}
 	else if (type == 3)
 	{
