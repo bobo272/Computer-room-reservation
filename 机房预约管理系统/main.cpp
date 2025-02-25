@@ -9,6 +9,7 @@
 using namespace std;
 
 void LoginIn(string fileName, int type);
+void managerMenu(Identity*& manager);
 
 
 int main() {
@@ -148,6 +149,8 @@ void LoginIn(string fileName, int type)
 				system("cls");
 				person = new Manager(name, pwd);
 
+				managerMenu(person);
+
 				return;//返回
 			}
 		}
@@ -158,4 +161,49 @@ void LoginIn(string fileName, int type)
 	system("pause");
 	system("cls");
 	return;
+}
+
+
+//管理员菜单
+void managerMenu(Identity*& manager)
+{
+	while (true)
+	{
+		//管理员菜单
+		manager->Menu();
+
+		Manager* man = (Manager*)manager;
+		int select = 0;
+
+		cin >> select;
+
+		if (select == 1)  //添加账号
+		{
+			cout << "添加账号" << endl;
+			man->addPerson();
+		}
+		else if (select == 2) //查看账号
+		{
+			cout << "查看账号" << endl;
+			man->showPerson();
+		}
+		else if (select == 3) //查看机房
+		{
+			cout << "查看机房" << endl;
+			man->showComputer();
+		}
+		else if (select == 4) //清空预约
+		{
+			cout << "清空预约" << endl;
+			man->cleanFile();
+		}
+		else
+		{
+			delete manager;
+			cout << "注销成功" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+	}
 }
