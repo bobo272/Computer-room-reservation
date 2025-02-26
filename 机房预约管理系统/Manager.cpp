@@ -1,6 +1,6 @@
 #include "Manager.h"
-
-
+#include <fstream>
+#include "globalFile.h"
 Manager::Manager()
 {
 }//默认构造
@@ -35,6 +35,49 @@ void Manager::Menu()
 
 void Manager::addPerson()
 {
+	cout << "请输入添加账号的类型" << endl;
+	cout << "1、添加老师" << endl;
+	cout << "2、添加审核" << endl;
+
+
+	string fileName;
+	string tip;
+	ofstream ofs;
+
+	int select = 0;
+	cin >> select;
+
+	if (select == 2)
+	{
+		fileName = AUDITOR_FILE;
+		tip = "请输入id： ";
+	}
+	else
+	{
+		fileName = TEACHER_FILE;
+		tip = "请输入id：";
+	}
+
+	ofs.open(fileName, ios::out | ios::app);
+	int id;
+	string name;
+	string pwd;
+	cout << tip << endl;
+	cin >> id;
+
+	cout << "请输入姓名： " << endl;
+	cin >> name;
+
+	cout << "请输入密码： " << endl;
+	cin >> pwd;
+
+	ofs << id << " " << name << " " << pwd << " " << endl;
+	cout << "添加成功" << endl;
+
+	system("pause");
+	system("cls");
+
+	ofs.close();
 }//添加账号  
 
 
