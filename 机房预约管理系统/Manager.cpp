@@ -10,6 +10,8 @@ Manager::Manager(string name, string pwd)
 {
 	this->m_Name = name;
 	this->m_Pwd = pwd;
+
+	this->initVector();
 }//有参构造
 
 
@@ -93,3 +95,39 @@ void Manager::showComputer()
 void Manager::cleanFile()
 {
 }//清空预约记录
+
+
+void Manager::initVector()
+{
+	ifstream ifs;
+	ifs.open(AUDITOR_FILE, ios::in);
+	if (!ifs.is_open())
+	{
+		cout << "文件不存在" << endl;
+		return;
+	}
+
+	vAud.clear();
+	vTea.clear();
+
+	Auditor a;
+	while (ifs >> a.m_id && ifs >> a.m_Name && ifs >> a.m_Pwd)
+	{
+		vAud.push_back(a);
+	}
+
+	cout << "审核的人数是" << vAud.size() << endl;
+
+	ifs.close();//审核人数统计结束
+
+	ifs.open(TEACHER_FILE, ios::in);
+
+	Teacher t;
+	while (ifs >> t.m_Id && ifs >> t.m_Name && ifs >> t.m_Pwd)
+	{
+		vTea.push_back(t);
+	}
+	cout << "当前教师数量为： " << vTea.size() << endl;
+
+	ifs.close();
+}

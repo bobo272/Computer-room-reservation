@@ -30,5 +30,5 @@ public:
 	
 	void cancelOrder();//取消预约
 
-	int m_id;//教师id
+	int m_Id;//教师id
 };

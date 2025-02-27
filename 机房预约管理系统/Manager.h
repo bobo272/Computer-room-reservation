@@ -1,6 +1,9 @@
 #pragma once
 #include "Identity.h"
+#include <vector>
 #include <iostream>
+#include "Auditor.h"
+#include "Teacher.h"
 using namespace std;
 
 
@@ -30,4 +33,10 @@ public:
 	void showComputer();//查看机房信息
 
 	void cleanFile();//清空预约记录
+
+	void initVector();//初始化并判断是否重复
+
+	vector<Auditor> vAud;//审查容器
+
+	vector<Teacher> vTea;//教师容器
 };
