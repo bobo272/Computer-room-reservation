@@ -36,6 +36,8 @@ public:
 
 	void initVector();//初始化并判断是否重复
 
+	bool checkRepeat(int id, int type);//检查重复
+
 	vector<Auditor> vAud;//审查容器
 
 	vector<Teacher> vTea;//教师容器

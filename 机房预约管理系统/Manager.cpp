@@ -1,6 +1,7 @@
 #include "Manager.h"
 #include <fstream>
 #include "globalFile.h"
+
 Manager::Manager()
 {
 }//默认构造
@@ -48,16 +49,18 @@ void Manager::addPerson()
 
 	int select = 0;
 	cin >> select;
-
+	string errorTip; //重复错误提示
 	if (select == 2)
 	{
 		fileName = AUDITOR_FILE;
 		tip = "请输入id： ";
+		errorTip = "id重复，请重新输入";
 	}
 	else
 	{
 		fileName = TEACHER_FILE;
 		tip = "请输入id：";
+		errorTip = "id重复，请重新输入";
 	}
 
 	ofs.open(fileName, ios::out | ios::app);
@@ -65,7 +68,22 @@ void Manager::addPerson()
 	string name;
 	string pwd;
 	cout << tip << endl;
-	cin >> id;
+
+	while (true)
+	{
+		cin >> id;
+
+		bool ret = this->checkRepeat(id, select);
+
+		if (ret) //有重复
+		{
+			cout << errorTip << endl;
+		}
+		else
+		{
+			break;
+		}
+	}
 
 	cout << "请输入姓名： " << endl;
 	cin >> name;
@@ -80,6 +98,9 @@ void Manager::addPerson()
 	system("cls");
 
 	ofs.close();
+
+	//重新初始化容器
+	this->initVector();
 }//添加账号  
 
 
@@ -130,4 +151,29 @@ void Manager::initVector()
 	cout << "当前教师数量为： " << vTea.size() << endl;
 
 	ifs.close();
+}
+
+bool Manager::checkRepeat(int id, int type)
+{
+	if (type == 1)
+	{
+		for (auto intr = vTea.begin(); intr != vTea.end(); intr++)
+		{
+			if (id == intr->m_Id)
+			{
+				return true;
+			}
+		}
+	}
+	else
+	{
+		for (auto intr = vAud.begin(); intr != vAud.end(); intr++)
+		{
+			if (id == intr->m_id)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
 }
