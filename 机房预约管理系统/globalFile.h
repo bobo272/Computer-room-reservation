@@ -13,7 +13,7 @@
 #define AUDITOR_FILE "auditor.txt"
 
 //机房信息文件
-#define COMPUTER_FILE "computorroom.txt"
+#define COMPUTER_FILE "computerroom.txt"
 
 //订单文件
 #define ORDER_FILE "order.txt"

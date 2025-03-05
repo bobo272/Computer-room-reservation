@@ -5,6 +5,7 @@
 #include "Auditor.h"
 #include "Teacher.h"
 #include <algorithm>
+#include "ComputerRoom.h"
 using namespace std;
 
 
@@ -42,4 +43,6 @@ public:
 	vector<Auditor> vAud;//审查容器
 
 	vector<Teacher> vTea;//教师容器
+
+	vector<ComputerRoom> vCom;//机房容器
 };

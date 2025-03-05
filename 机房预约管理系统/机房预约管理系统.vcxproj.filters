@@ -44,10 +44,15 @@
     <ClInclude Include="globalFile.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ComputerRoom.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="teacher.txt" />
     <Text Include="auditor.txt" />
     <Text Include="admin.txt" />
+    <Text Include="computerroom.txt" />
+    <Text Include="order.txt" />
   </ItemGroup>
 </Project>

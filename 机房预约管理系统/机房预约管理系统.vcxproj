@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Auditor.h" />
+    <ClInclude Include="ComputerRoom.h" />
     <ClInclude Include="globalFile.h" />
     <ClInclude Include="Identity.h" />
     <ClInclude Include="Manager.h" />
@@ -142,6 +143,8 @@
   <ItemGroup>
     <Text Include="admin.txt" />
     <Text Include="auditor.txt" />
+    <Text Include="computerroom.txt" />
+    <Text Include="order.txt" />
     <Text Include="teacher.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
