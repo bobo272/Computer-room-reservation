@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Auditor.h"
 #include "Teacher.h"
+#include <algorithm>
 using namespace std;
 
 

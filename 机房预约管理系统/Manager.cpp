@@ -103,9 +103,42 @@ void Manager::addPerson()
 	this->initVector();
 }//添加账号  
 
+void printTeacher(Teacher& t)
+{
+	cout << "id： " << t.m_Id << " 姓名： " << t.m_Name << " 密码：" << t.m_Pwd << endl;
+}
+
+void printAuditor(Auditor& a)
+{
+	cout << "id: " << a.m_id << " 姓名:" << a.m_Name << " 密码:" << a.m_Pwd << endl;
+}
 
 void Manager::showPerson()
 {
+	cout << "请选择查看内容：" << endl;
+	cout << "1、查看所有老师" << endl;
+	cout << "2、查看所有审核" << endl;
+
+	int select = 0;
+
+	cin >> select;
+
+	if(select == 1)
+	{
+		cout << "所有老师信息如下： " << endl;
+		for_each(vTea.begin(), vTea.end(), printTeacher);
+	}
+	else if (select == 2)
+	{
+		cout << "所有审核信息如下： " << endl;
+		for_each(vAud.begin(), vAud.end(), printAuditor);
+	}
+	else
+	{
+		cout << "输入有误" << endl;
+	}
+	system("pause");
+	system("cls");
 }//查看账号
 
 
