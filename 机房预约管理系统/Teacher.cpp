@@ -1,20 +1,20 @@
 #include "Teacher.h"
 
-Teacher::Teacher(){}//Ä¬ÈÏ¹¹Ôì
+Teacher::Teacher() {}//é»˜è®¤æ„é€ 
 
-Teacher::Teacher(int id, string name, string pwd){}//º¬²Î¹¹Ôì
-
-
-void Teacher::Menu(){}
+Teacher::Teacher(int id, string name, string pwd) {}//å«å‚æ„é€ 
 
 
-void Teacher::applyOrder(){}//ÉêÇëÔ¤Ô¼
+void Teacher::Menu() {}
 
 
-void Teacher::showMyOrder(){}//²é¿´ÎÒµÄÔ¤Ô¼
+void Teacher::applyOrder() {}//ç”³è¯·é¢„çº¦
 
 
-void Teacher::showAllOrder(){}//²é¿´ËùÓĞÔ¤Ô¼
+void Teacher::showMyOrder() {}//æŸ¥çœ‹æˆ‘çš„é¢„çº¦
 
 
-void Teacher::cancelOrder(){}//È¡ÏûÔ¤Ô¼
+void Teacher::showAllOrder() {}//æŸ¥çœ‹æ‰€æœ‰é¢„çº¦
+
+
+void Teacher::cancelOrder() {}//å–æ¶ˆé¢„çº¦

@@ -7,6 +7,6 @@ class Identity
 public:
 	virtual void Menu() = 0;
 
-	std::string m_Name; //ÕË»§Ãû
-	std::string m_Pwd;  //ÃÜÂë
+	std::string m_Name; //ï¿½Ë»ï¿½ï¿½ï¿½
+	std::string m_Pwd;  //ï¿½ï¿½ï¿½ï¿½
 };

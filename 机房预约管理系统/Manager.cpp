@@ -4,7 +4,7 @@
 
 Manager::Manager()
 {
-}//Ä¬ÈÏ¹¹Ôì
+}//é»˜è®¤æ„é€ 
 
 
 Manager::Manager(string name, string pwd)
@@ -23,37 +23,37 @@ Manager::Manager(string name, string pwd)
 	{
 		vCom.push_back(c);
 	}
-	cout << "µ±Ç°»ú·¿ÊıÁ¿Îª£º " << vCom.size() << endl;
+	cout << "å½“å‰æœºæˆ¿æ•°é‡ä¸ºï¼š " << vCom.size() << endl;
 
 	ifs.close();
-}//ÓĞ²Î¹¹Ôì
+}//æœ‰å‚æ„é€ 
 
 
 void Manager::Menu()
 {
-	cout << "»¶Ó­¹ÜÀíÔ±£º" << this->m_Name << "µÇÂ¼£¡" << endl;
+	cout << "æ¬¢è¿ç®¡ç†å‘˜ï¼š" << this->m_Name << "ç™»å½•ï¼" << endl;
 	cout << "\t\t ---------------------------------" << endl;
 	cout << "\t\t|                                |" << endl;
-	cout << "\t\t|          1.Ìí¼ÓÕËºÅ            |" << endl;
+	cout << "\t\t|          1.æ·»åŠ è´¦å·            |" << endl;
 	cout << "\t\t|                                |" << endl;
-	cout << "\t\t|          2.²é¿´ÕËºÅ            |" << endl;
+	cout << "\t\t|          2.æŸ¥çœ‹è´¦å·            |" << endl;
 	cout << "\t\t|                                |" << endl;
-	cout << "\t\t|          3.²é¿´»ú·¿            |" << endl;
+	cout << "\t\t|          3.æŸ¥çœ‹æœºæˆ¿            |" << endl;
 	cout << "\t\t|                                |" << endl;
-	cout << "\t\t|          4.Çå¿ÕÔ¤Ô¼            |" << endl;
+	cout << "\t\t|          4.æ¸…ç©ºé¢„çº¦            |" << endl;
 	cout << "\t\t|                                |" << endl;
-	cout << "\t\t|          0.×¢ÏúµÇÂ¼            |" << endl;
+	cout << "\t\t|          0.æ³¨é”€ç™»å½•            |" << endl;
 	cout << "\t\t|                                |" << endl;
 	cout << "\t\t ---------------------------------" << endl;
-	cout << "ÇëÑ¡ÔñÄúµÄ²Ù×÷£º " << endl;
-}//Ñ¡Ôñ²Ëµ¥
+	cout << "è¯·é€‰æ‹©æ‚¨çš„æ“ä½œï¼š " << endl;
+}//é€‰æ‹©èœå•
 
 
 void Manager::addPerson()
 {
-	cout << "ÇëÊäÈëÌí¼ÓÕËºÅµÄÀàĞÍ" << endl;
-	cout << "1¡¢Ìí¼ÓÀÏÊ¦" << endl;
-	cout << "2¡¢Ìí¼ÓÉóºË" << endl;
+	cout << "è¯·è¾“å…¥æ·»åŠ è´¦å·çš„ç±»å‹" << endl;
+	cout << "1ã€æ·»åŠ è€å¸ˆ" << endl;
+	cout << "2ã€æ·»åŠ å®¡æ ¸" << endl;
 
 
 	string fileName;
@@ -62,18 +62,18 @@ void Manager::addPerson()
 
 	int select = 0;
 	cin >> select;
-	string errorTip; //ÖØ¸´´íÎóÌáÊ¾
+	string errorTip; //é‡å¤é”™è¯¯æç¤º
 	if (select == 2)
 	{
 		fileName = AUDITOR_FILE;
-		tip = "ÇëÊäÈëid£º ";
-		errorTip = "idÖØ¸´£¬ÇëÖØĞÂÊäÈë";
+		tip = "è¯·è¾“å…¥idï¼š ";
+		errorTip = "idé‡å¤ï¼Œè¯·é‡æ–°è¾“å…¥";
 	}
 	else
 	{
 		fileName = TEACHER_FILE;
-		tip = "ÇëÊäÈëid£º";
-		errorTip = "idÖØ¸´£¬ÇëÖØĞÂÊäÈë";
+		tip = "è¯·è¾“å…¥idï¼š";
+		errorTip = "idé‡å¤ï¼Œè¯·é‡æ–°è¾“å…¥";
 	}
 
 	ofs.open(fileName, ios::out | ios::app);
@@ -88,7 +88,7 @@ void Manager::addPerson()
 
 		bool ret = this->checkRepeat(id, select);
 
-		if (ret) //ÓĞÖØ¸´
+		if (ret) //æœ‰é‡å¤
 		{
 			cout << errorTip << endl;
 		}
@@ -98,83 +98,83 @@ void Manager::addPerson()
 		}
 	}
 
-	cout << "ÇëÊäÈëĞÕÃû£º " << endl;
+	cout << "è¯·è¾“å…¥å§“åï¼š " << endl;
 	cin >> name;
 
-	cout << "ÇëÊäÈëÃÜÂë£º " << endl;
+	cout << "è¯·è¾“å…¥å¯†ç ï¼š " << endl;
 	cin >> pwd;
 
 	ofs << id << " " << name << " " << pwd << " " << endl;
-	cout << "Ìí¼Ó³É¹¦" << endl;
+	cout << "æ·»åŠ æˆåŠŸ" << endl;
 
 	system("pause");
 	system("cls");
 
 	ofs.close();
 
-	//ÖØĞÂ³õÊ¼»¯ÈİÆ÷
+	//é‡æ–°åˆå§‹åŒ–å®¹å™¨
 	this->initVector();
-}//Ìí¼ÓÕËºÅ  
+}//æ·»åŠ è´¦å·  
 
 void printTeacher(Teacher& t)
 {
-	cout << "id£º " << t.m_Id << " ĞÕÃû£º " << t.m_Name << " ÃÜÂë£º" << t.m_Pwd << endl;
+	cout << "idï¼š " << t.m_Id << " å§“åï¼š " << t.m_Name << " å¯†ç ï¼š" << t.m_Pwd << endl;
 }
 
 void printAuditor(Auditor& a)
 {
-	cout << "id: " << a.m_id << " ĞÕÃû:" << a.m_Name << " ÃÜÂë:" << a.m_Pwd << endl;
+	cout << "id: " << a.m_id << " å§“å:" << a.m_Name << " å¯†ç :" << a.m_Pwd << endl;
 }
 
 void Manager::showPerson()
 {
-	cout << "ÇëÑ¡Ôñ²é¿´ÄÚÈİ£º" << endl;
-	cout << "1¡¢²é¿´ËùÓĞÀÏÊ¦" << endl;
-	cout << "2¡¢²é¿´ËùÓĞÉóºË" << endl;
+	cout << "è¯·é€‰æ‹©æŸ¥çœ‹å†…å®¹ï¼š" << endl;
+	cout << "1ã€æŸ¥çœ‹æ‰€æœ‰è€å¸ˆ" << endl;
+	cout << "2ã€æŸ¥çœ‹æ‰€æœ‰å®¡æ ¸" << endl;
 
 	int select = 0;
 
 	cin >> select;
 
-	if(select == 1)
+	if (select == 1)
 	{
-		cout << "ËùÓĞÀÏÊ¦ĞÅÏ¢ÈçÏÂ£º " << endl;
+		cout << "æ‰€æœ‰è€å¸ˆä¿¡æ¯å¦‚ä¸‹ï¼š " << endl;
 		for_each(vTea.begin(), vTea.end(), printTeacher);
 	}
 	else if (select == 2)
 	{
-		cout << "ËùÓĞÉóºËĞÅÏ¢ÈçÏÂ£º " << endl;
+		cout << "æ‰€æœ‰å®¡æ ¸ä¿¡æ¯å¦‚ä¸‹ï¼š " << endl;
 		for_each(vAud.begin(), vAud.end(), printAuditor);
 	}
 	else
 	{
-		cout << "ÊäÈëÓĞÎó" << endl;
+		cout << "è¾“å…¥æœ‰è¯¯" << endl;
 	}
 	system("pause");
 	system("cls");
-}//²é¿´ÕËºÅ
+}//æŸ¥çœ‹è´¦å·
 
 
 void Manager::showComputer()
 {
-	cout << "»ú·¿ĞÅÏ¢ÈçÏÂ£º " << endl;
+	cout << "æœºæˆ¿ä¿¡æ¯å¦‚ä¸‹ï¼š " << endl;
 	for (vector<ComputerRoom>::iterator it = vCom.begin(); it != vCom.end(); it++)
 	{
-		cout << "»ú·¿±àºÅ£º " << it->m_ComId << " »ú·¿×î´óÈİÁ¿£º " << it->m_MaxNum << endl;
+		cout << "æœºæˆ¿ç¼–å·ï¼š " << it->m_ComId << " æœºæˆ¿æœ€å¤§å®¹é‡ï¼š " << it->m_MaxNum << endl;
 	}
 	system("pause");
 	system("cls");
-}//²é¿´»ú·¿ĞÅÏ¢
+}//æŸ¥çœ‹æœºæˆ¿ä¿¡æ¯
 
 void Manager::cleanFile()
 {
 	ofstream ofs(ORDER_FILE, ios::trunc);
 	ofs.close();
 
-	cout << "Çå¿Õ³É¹¦£¡" << endl;
+	cout << "æ¸…ç©ºæˆåŠŸï¼" << endl;
 	system("pause");
 	system("cls");
-}//Çå¿ÕÔ¤Ô¼¼ÇÂ¼
+}//æ¸…ç©ºé¢„çº¦è®°å½•
 
 
 void Manager::initVector()
@@ -183,7 +183,7 @@ void Manager::initVector()
 	ifs.open(AUDITOR_FILE, ios::in);
 	if (!ifs.is_open())
 	{
-		cout << "ÎÄ¼ş²»´æÔÚ" << endl;
+		cout << "æ–‡ä»¶ä¸å­˜åœ¨" << endl;
 		return;
 	}
 
@@ -196,9 +196,9 @@ void Manager::initVector()
 		vAud.push_back(a);
 	}
 
-	cout << "ÉóºËµÄÈËÊıÊÇ" << vAud.size() << endl;
+	cout << "å®¡æ ¸çš„äººæ•°æ˜¯" << vAud.size() << endl;
 
-	ifs.close();//ÉóºËÈËÊıÍ³¼Æ½áÊø
+	ifs.close();//å®¡æ ¸äººæ•°ç»Ÿè®¡ç»“æŸ
 
 	ifs.open(TEACHER_FILE, ios::in);
 
@@ -207,7 +207,7 @@ void Manager::initVector()
 	{
 		vTea.push_back(t);
 	}
-	cout << "µ±Ç°½ÌÊ¦ÊıÁ¿Îª£º " << vTea.size() << endl;
+	cout << "å½“å‰æ•™å¸ˆæ•°é‡ä¸ºï¼š " << vTea.size() << endl;
 
 	ifs.close();
 }

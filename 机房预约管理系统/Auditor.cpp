@@ -1,11 +1,11 @@
 #include "Auditor.h"
 
-Auditor::Auditor(){}//Ä¬ÈÏ¹¹Ôì
+Auditor::Auditor() {}//é»˜è®¤æ„é€ 
 
-Auditor::Auditor(int id, string name, string pwd){}//º¬²Î¹¹Ôì
+Auditor::Auditor(int id, string name, string pwd) {}//å«å‚æ„é€ 
 
-void Auditor::Menu(){}//²Ëµ¥
+void Auditor::Menu() {}//èœå•
 
-void Auditor::showAllOrder(){}//²é¿´ËùÓĞÔ¤Ô¼
+void Auditor::showAllOrder() {}//æŸ¥çœ‹æ‰€æœ‰é¢„çº¦
 
-void Auditor::validOrder(){}//ÉóºËµÄÔ¤Ô¼
+void Auditor::validOrder() {}//å®¡æ ¸çš„é¢„çº¦

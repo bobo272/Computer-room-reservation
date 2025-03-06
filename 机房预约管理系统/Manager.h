@@ -9,40 +9,40 @@
 using namespace std;
 
 
-//- ÏÔÊ¾¹ÜÀíÔ±²Ù×÷µÄ²Ëµ¥½çÃæ
+//- æ˜¾ç¤ºç®¡ç†å‘˜æ“ä½œçš„èœå•ç•Œé¢
 //
-//- Ìí¼ÓÕËºÅ
+//- æ·»åŠ è´¦å·
 //
-//- ²é¿´ÕËºÅ
+//- æŸ¥çœ‹è´¦å·
 //
-//- ²é¿´»ú·¿ĞÅÏ¢
+//- æŸ¥çœ‹æœºæˆ¿ä¿¡æ¯
 //
-//- Çå¿ÕÔ¤Ô¼¼ÇÂ¼
+//- æ¸…ç©ºé¢„çº¦è®°å½•
 
 class Manager :public Identity
-{	
+{
 public:
-	Manager();//Ä¬ÈÏ¹¹Ôì
-	
-	Manager(string name, string pwd);//ÓĞ²Î¹¹Ôì  ¹ÜÀíÔ±ĞÕÃû£¬ÃÜÂë
-	
-	virtual void Menu();//Ñ¡Ôñ²Ëµ¥
-	
-	void addPerson();//Ìí¼ÓÕËºÅ  
-	
-	void showPerson();//²é¿´ÕËºÅ
-	
-	void showComputer();//²é¿´»ú·¿ĞÅÏ¢
+	Manager();//é»˜è®¤æ„é€ 
 
-	void cleanFile();//Çå¿ÕÔ¤Ô¼¼ÇÂ¼
+	Manager(string name, string pwd);//æœ‰å‚æ„é€   ç®¡ç†å‘˜å§“åï¼Œå¯†ç 
 
-	void initVector();//³õÊ¼»¯²¢ÅĞ¶ÏÊÇ·ñÖØ¸´
+	virtual void Menu();//é€‰æ‹©èœå•
 
-	bool checkRepeat(int id, int type);//¼ì²éÖØ¸´
+	void addPerson();//æ·»åŠ è´¦å·  
 
-	vector<Auditor> vAud;//Éó²éÈİÆ÷
+	void showPerson();//æŸ¥çœ‹è´¦å·
 
-	vector<Teacher> vTea;//½ÌÊ¦ÈİÆ÷
+	void showComputer();//æŸ¥çœ‹æœºæˆ¿ä¿¡æ¯
 
-	vector<ComputerRoom> vCom;//»ú·¿ÈİÆ÷
+	void cleanFile();//æ¸…ç©ºé¢„çº¦è®°å½•
+
+	void initVector();//åˆå§‹åŒ–å¹¶åˆ¤æ–­æ˜¯å¦é‡å¤
+
+	bool checkRepeat(int id, int type);//æ£€æŸ¥é‡å¤
+
+	vector<Auditor> vAud;//å®¡æŸ¥å®¹å™¨
+
+	vector<Teacher> vTea;//æ•™å¸ˆå®¹å™¨
+
+	vector<ComputerRoom> vCom;//æœºæˆ¿å®¹å™¨
 };

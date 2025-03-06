@@ -4,24 +4,24 @@
 using namespace std;
 
 /*
-- ÏÔÊ¾²Ù×÷µÄ²Ëµ¥½çÃæ
-- ²é¿´ËùÓĞÔ¤Ô¼
-- ÉóºËÔ¤Ô¼
+- æ˜¾ç¤ºæ“ä½œçš„èœå•ç•Œé¢
+- æŸ¥çœ‹æ‰€æœ‰é¢„çº¦
+- å®¡æ ¸é¢„çº¦
 */
 
 
 class Auditor :public Identity
 {
 public:
-	Auditor();//Ä¬ÈÏ¹¹Ôì
+	Auditor();//é»˜è®¤æ„é€ 
 
-	Auditor(int id, string name, string pwd);//º¬²Î¹¹Ôì
+	Auditor(int id, string name, string pwd);//å«å‚æ„é€ 
 
-	virtual void Menu();//²Ëµ¥
+	virtual void Menu();//èœå•
 
-	void showAllOrder();//²é¿´ËùÓĞÔ¤Ô¼
+	void showAllOrder();//æŸ¥çœ‹æ‰€æœ‰é¢„çº¦
 
-	void validOrder();//ÉóºËÔ¤Ô¼
+	void validOrder();//å®¡æ ¸é¢„çº¦
 
 	int m_id;
 };

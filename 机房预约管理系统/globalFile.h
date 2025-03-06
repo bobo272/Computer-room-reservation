@@ -1,20 +1,19 @@
 #pragma once
 
-//ºóĞø¿ÉÄÜ»á¸Ä³Émysql£¬»òÕßsqline
+//åç»­å¯èƒ½ä¼šæ”¹æˆmysqlï¼Œæˆ–è€…sqline
 
 
-//¹ÜÀíÔ±ÎÄ¼ş
+//ç®¡ç†å‘˜æ–‡ä»¶
 #define ADMIN_FILE "admin.txt"
 
-//ÀÏÊ¦ÎÄ¼ş
+//è€å¸ˆæ–‡ä»¶
 #define TEACHER_FILE "teacher.txt"
 
-//ÉóºËÎÄ¼ş
+//å®¡æ ¸æ–‡ä»¶
 #define AUDITOR_FILE "auditor.txt"
 
-//»ú·¿ĞÅÏ¢ÎÄ¼ş
+//æœºæˆ¿ä¿¡æ¯æ–‡ä»¶
 #define COMPUTER_FILE "computerroom.txt"
 
-//¶©µ¥ÎÄ¼ş
+//è®¢å•æ–‡ä»¶
 #define ORDER_FILE "order.txt"
-

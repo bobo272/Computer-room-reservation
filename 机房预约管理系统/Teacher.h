@@ -3,32 +3,32 @@
 #include <iostream>
 using namespace std;
 /*
-- ÏÔÊ¾²Ù×÷µÄ²Ëµ¥½çÃæ
-- ÉêÇëÔ¤Ô¼
-- ²é¿´×ÔÉíÔ¤Ô¼
-- ²é¿´ËùÓĞÔ¤Ô¼
-- È¡ÏûÔ¤Ô¼
+- æ˜¾ç¤ºæ“ä½œçš„èœå•ç•Œé¢
+- ç”³è¯·é¢„çº¦
+- æŸ¥çœ‹è‡ªèº«é¢„çº¦
+- æŸ¥çœ‹æ‰€æœ‰é¢„çº¦
+- å–æ¶ˆé¢„çº¦
 */
 class Teacher : public Identity
 {
 public:
-	Teacher();//Ä¬ÈÏ¹¹Ôì
+	Teacher();//é»˜è®¤æ„é€ 
 
-	Teacher(int id, string name, string pwd);//º¬²Î¹¹Ôì
+	Teacher(int id, string name, string pwd);//å«å‚æ„é€ 
 
 	virtual void Menu();
 
-	
-	void applyOrder();//ÉêÇëÔ¤Ô¼
 
-	
-	void showMyOrder();//²é¿´ÎÒµÄÔ¤Ô¼
+	void applyOrder();//ç”³è¯·é¢„çº¦
 
-	
-	void showAllOrder();//²é¿´ËùÓĞÔ¤Ô¼
 
-	
-	void cancelOrder();//È¡ÏûÔ¤Ô¼
+	void showMyOrder();//æŸ¥çœ‹æˆ‘çš„é¢„çº¦
 
-	int m_Id;//½ÌÊ¦id
+
+	void showAllOrder();//æŸ¥çœ‹æ‰€æœ‰é¢„çº¦
+
+
+	void cancelOrder();//å–æ¶ˆé¢„çº¦
+
+	int m_Id;//æ•™å¸ˆid
 };
