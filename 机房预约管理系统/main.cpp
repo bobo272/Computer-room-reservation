@@ -10,7 +10,7 @@ using namespace std;
 
 void LoginIn(string fileName, int type);
 void managerMenu(Identity*& manager);
-
+void teacherMenu(Identity*& teacher);
 
 int main() {
 	int select = 0;
@@ -109,7 +109,7 @@ void LoginIn(string fileName, int type)
 				system("pause");
 				system("cls");
 				person = new Teacher(id, name, pwd);
-
+				teacherMenu(person);
 				return;//返回
 			}
 		}
@@ -204,6 +204,48 @@ void managerMenu(Identity*& manager)
 			system("pause");
 			system("cls");
 			return;
+		}
+	}
+}
+
+void teacherMenu(Identity*& teacher)
+{
+	while (1)
+	{
+		teacher->Menu();
+
+		Teacher* tea = (Teacher*)teacher;
+		int select = 0;
+
+		cin >> select;
+
+		if (select == 1)
+		{
+			tea->applyOrder();//申请预约
+		}
+		else if (select == 2)
+		{
+			tea->showAllOrder();
+		}
+		else if (select == 3)
+		{
+			tea->showAllOrder();
+		}
+		else if (select == 4)
+		{
+			tea->cancelOrder();
+		}
+		else if (select == 0)
+		{
+			delete teacher;
+			cout << "注销成功" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+		else
+		{
+			cout << "输入有误，请重新输入" << endl;
 		}
 	}
 }

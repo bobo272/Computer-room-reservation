@@ -1,6 +1,10 @@
 #pragma once
 #include "Identity.h"
 #include <iostream>
+#include "ComputerRoom.h"
+#include <vector>
+#include <fstream>
+#include "globalFile.h"
 using namespace std;
 /*
 - 显示操作的菜单界面
