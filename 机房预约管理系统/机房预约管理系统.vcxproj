@@ -130,6 +130,7 @@
     <ClCompile Include="Auditor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="orderFile.cpp" />
     <ClCompile Include="Teacher.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +139,7 @@
     <ClInclude Include="globalFile.h" />
     <ClInclude Include="Identity.h" />
     <ClInclude Include="Manager.h" />
+    <ClInclude Include="orderFile.h" />
     <ClInclude Include="Teacher.h" />
   </ItemGroup>
   <ItemGroup>

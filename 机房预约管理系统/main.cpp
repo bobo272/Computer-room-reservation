@@ -225,7 +225,7 @@ void teacherMenu(Identity*& teacher)
 		}
 		else if (select == 2)
 		{
-			tea->showAllOrder();
+			tea->showMyOrder();
 		}
 		else if (select == 3)
 		{
