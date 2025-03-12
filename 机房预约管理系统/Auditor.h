@@ -1,6 +1,11 @@
 #pragma once
 #include "Identity.h"
 #include <iostream>
+#include "ComputerRoom.h"
+#include <vector>
+#include <fstream>
+#include "globalFile.h"
+#include "orderFile.h"
 using namespace std;
 
 /*

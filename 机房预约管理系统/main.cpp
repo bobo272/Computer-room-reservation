@@ -11,12 +11,13 @@ using namespace std;
 void LoginIn(string fileName, int type);
 void managerMenu(Identity*& manager);
 void teacherMenu(Identity*& teacher);
+void auditorMenu(Identity*& auditor);
 
 int main() {
 	int select = 0;
 
 	while (true) {
-		cout << "======================  欢迎来到传智播客机房预约系统  =====================" << endl;
+		cout << "======================  机房预约系统  =====================" << endl;
 		cout << endl << "请输入您的身份" << endl;
 		cout << "\t\t -------------------------------\n";
 		cout << "\t\t|                               |\n";
@@ -128,7 +129,7 @@ void LoginIn(string fileName, int type)
 				system("pause");
 				system("cls");
 				person = new Auditor(id, name, pwd);
-
+				auditorMenu(person);
 				return;//返回
 			}
 		}
@@ -246,6 +247,45 @@ void teacherMenu(Identity*& teacher)
 		else
 		{
 			cout << "输入有误，请重新输入" << endl;
+		}
+	}
+}
+
+void auditorMenu(Identity*& auditor)
+{
+	while (true)
+	{
+		//教师菜单
+		auditor->Menu();
+
+		Auditor* tea = (Auditor*)auditor;
+		int select = 0;
+
+		cin >> select;
+
+		if (select == 1)
+		{
+			//查看所有预约
+			tea->showAllOrder();
+		}
+		else if (select == 2)
+		{
+			//审核预约
+			tea->validOrder();
+		}
+		else if (select == 0)
+		{
+			delete auditor;
+			cout << "注销成功" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+		else
+		{
+			cout << "输入不正确，请重新输入" << endl;
+			system("pause");
+			system("cls");
 		}
 	}
 }
