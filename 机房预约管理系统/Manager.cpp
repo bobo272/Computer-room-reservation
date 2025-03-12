@@ -42,6 +42,10 @@ void Manager::Menu()
 	cout << "\t\t|                                |" << endl;
 	cout << "\t\t|          4.清空预约            |" << endl;
 	cout << "\t\t|                                |" << endl;
+	cout << "\t\t|          5.添加机房            |" << endl;
+	cout << "\t\t|                                |" << endl;
+	cout << "\t\t|          6.修改机房            |" << endl;
+	cout << "\t\t|                                |" << endl;
 	cout << "\t\t|          0.注销登录            |" << endl;
 	cout << "\t\t|                                |" << endl;
 	cout << "\t\t ---------------------------------" << endl;
@@ -235,4 +239,53 @@ bool Manager::checkRepeat(int id, int type)
 		}
 	}
 	return false;
+}
+
+void Manager::addComputerRoom() {
+	ComputerRoom newRoom;
+	cout << "请输入机房编号：";
+	cin >> newRoom.m_ComId;
+	cout << "请输入机房最大容量：";
+	cin >> newRoom.m_MaxNum;
+
+	// 检查编号是否重复（类似账号查重逻辑）
+	if (checkRepeat(newRoom.m_ComId, 3)) {
+		cout << "机房编号重复！" << endl;
+		return;
+	}
+
+	vCom.push_back(newRoom);
+	cout << "添加成功！" << endl;
+
+	saveComputerRoomsToFile();
+}
+
+void Manager::modifyComputerRoom() {
+	showComputer(); // 调用现有方法显示机房列表 
+
+	int roomId;
+	cout << "请输入要修改的机房编号：";
+	cin >> roomId;
+
+	for (auto& room : vCom) {
+		if (room.m_ComId == roomId) {
+			cout << "请输入新容量：";
+			cin >> room.m_MaxNum;
+			cout << "修改成功！" << endl;
+
+			saveComputerRoomsToFile();
+			return;
+		}
+	}
+	cout << "未找到该机房！" << endl;
+}
+
+void Manager::saveComputerRoomsToFile() {
+	ofstream ofs(COMPUTER_FILE, ios::out | ios::trunc); // 清空模式打开文件 [^6][^4]
+
+	for (auto& room : vCom) {
+		ofs << room.m_ComId << " "  // 机房编号 [^3]
+			<< room.m_MaxNum << endl;// 最大容量 [^3]
+	}
+	ofs.close();
 }

@@ -198,13 +198,27 @@ void managerMenu(Identity*& manager)
 			cout << "清空预约" << endl;
 			man->cleanFile();
 		}
-		else
+		else if (select == 5)
+		{
+			cout << "添加机房" << endl;
+			man->addComputerRoom();
+		}
+		else if (select == 6)
+		{
+			cout << "修改机房" << endl;
+			man->modifyComputerRoom();
+		}
+		else if (select == 0)
 		{
 			delete manager;
 			cout << "注销成功" << endl;
 			system("pause");
 			system("cls");
 			return;
+		}
+		else
+		{
+			cout << "请重新输入" << endl;
 		}
 	}
 }

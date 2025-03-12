@@ -40,6 +40,12 @@ public:
 
 	bool checkRepeat(int id, int type);//检查重复
 
+	void addComputerRoom();   // 添加机房
+
+	void modifyComputerRoom();// 修改机房 
+	
+	void saveComputerRoomsToFile(); // 新增文件保存方法
+
 	vector<Auditor> vAud;//审查容器
 
 	vector<Teacher> vTea;//教师容器
